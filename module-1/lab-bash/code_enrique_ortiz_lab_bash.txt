@@ -1,0 +1,116 @@
+Lab_Bash_Enrique_Solution
+
+## Ejercicios
+
+* Imprime en consola "Hello World".
+
+print "Hello World"
+
+* Crea un directorio nuevo llamado `new_dir`.
+
+mkdir "new_dir"
+
+* Elimina ese directorio.
+
+rmdir new_dir
+
+* Copia el archivo `sed.txt` dentro de la carpeta lorem a la carpeta lorem-copy. 
+
+mkdir lorem-copy
+cp ~/Desktop/datamex1019/module-1/lab-bash/lorem/lorem.txt  ~/Desktop/datamex1019/module-1/lab-bash/lorem-copy
+
+
+
+* Copia los otros dos archivos de la carpeta lorem a la carpeta lorem-copy en una sola linea mediante el pipe `;`. 
+
+cp -R ~/Desktop/datamex1019/module-1/lab-bash/lorem/  ~/Desktop/datamex1019/module-1/lab-bash/lorem-copy 
+
+
+* Muestra el contenido del archivo `sed.txt` dentro de la carpeta lorem.
+
+cd lorem-copy
+open lorem.txt
+
+
+* Muestra el contenido de los archivos `at.txt` y `lorem.txt` dentro de la carpeta lorem. 
+
+$ cd lorem-copy
+$ open at.txt; lorem.txt
+
+* Visualiza las primeras 3 linas del archivo `sed.txt` dentro de la carpeta lorem-copy 
+
+$ head -3 ~/Desktop/datamex1019/module-1/lab-bash/lorem-copy/sed.txt
+
+* Añade `Homo homini lupus.` al final de archivo `sed.txt` dentro de la carpeta lorem-copy. 
+
+$ echo "Homo homini lupus" >> ~/Desktop/datamex1019/module-1/lab-bash/lorem-copy/sed.txt
+
+
+* Visualiza las últimas 3 linas del archivo `sed.txt` dentro de la carpeta lorem-copy. Deberías ver ahora `Homo homini lupus.`. 
+
+$ tail -3 ~/Desktop/datamex1019/module-1/lab-bash/lorem-copy/sed.txt
+
+
+* Sustituye todas las apariciones de `et` por `ET` del archivo `at.txt` dentro de la carpeta lorem a la carpeta lorem-copy. Deberás usar `sed`. 
+
+$ sed 's/et/ET/g' ~/Desktop/datamex1019/module-1/lab-bash/lorem-copy/at.txt
+
+* Encuentra al usuario activo en el sistema.
+
+$ cd/Users
+$ ls
+
+* Encuentra dónde estás en tu sistema de ficheros.
+
+$ pwd
+
+* Lista los archivos que terminan por `.txt` en la carpeta lorem.
+
+$ cd lorem-copy
+$ ls *.txt
+
+* Cuenta el número de lineas que tiene el archivo `sed.txt` dentro de la carpeta lorem. Tendrás que encadenar `cat` y `wc` mediante el pipe `|`. 
+
+$ cat ~/Desktop/datamex1019/module-1/lab-bash/lorem-copy/sed.txt | wc -l
+
+* Cuenta el número de **archivos** que empiezan por `lorem` que están en este directorio y en directorios internos
+
+$ find lorem -type f |wc -1
+
+* Encuentra todas las apariciones de `et` en `at.txt` dentro de la carpeta lorem.
+
+grep -iRl "et" ~/Desktop/datamex1019/module-1/lab-bash/lorem/at.txt
+
+* Cuenta el número de apariciones del string `et` en `at.txt` dentro de la carpeta lorem. Para ello debes obtener sólo los string buscados y contar las lineas. 
+
+$ grep -o -i et ~/Desktop/datamex1019/module-1/lab-bash/lorem/at.txt  | wc -l
+
+
+*  Cuenta el número de apariciones del string `et` en todos los archivos del directorio lorem-copy.
+
+$ grep -o -i et ~/Desktop/datamex1019/module-1/lab-bash/lorem-copy/at.txt  | wc -l
+$ grep -o -i et ~/Desktop/datamex1019/module-1/lab-bash/lorem-copy/sed.txt  | wc -l
+$ grep -o -i et ~/Desktop/datamex1019/module-1/lab-bash/lorem-copy/lorem.txt  | wc -l
+
+## Ficheros bash
+
+Manual vi: https://www.howtogeek.com/102468/a-beginners-guide-to-editing-text-files-with-vi/
+
+Cualquier comandos o comandos de bash se pueden almacenar en un fichero y ejecutar cuando queramos. Obviamente puedes utilizar tu editor preferido. Creamos el fichero: 
+```console
+$ vi list_files.sh
+```
+E incluimos el contenido que queramos. En este caso listar ficheros
+```~/Desktop/datamex1019/module-1/lab-bash
+ls
+```
+
+Una vez con los permisos adecuados podemos ejecutar el script `$ chmod a+x list_files.sh`
+```console
+$ bash list_files.sh
+```
+Y veremos por consola el siguiente output. 
+```console
+exercices  inputs  lorem  lorem-copy  modules  outputs  README.md
+
+(No hay mucho de mi parte que agregar, seguí los comandos y en donde decía "Python" en las instrucciones puse el directorio correspondiente.)
