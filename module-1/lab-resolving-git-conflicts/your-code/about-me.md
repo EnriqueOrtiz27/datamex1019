@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Mi nombre es Enrique Ortiz.
 
 Vengo de la Ciudad de México, aunque he vivido en distintas partes del mundo.
@@ -13,3 +14,9 @@ Después del bootcamp iré por un masaje y dormiré 40 horas seguidas, y despué
 Mi futuro se ve increíble: me divierto como programador, puedo dormir bien, hacer ejercicio, leer mucho y vivir una vida balanceada en donde me realizo profesional y personalmente. 
 
 Mi objetivo de carrera es usar mis conocimientos para crear un mundo más justo y en paz. 
+=======
+Vermis Sum: "I am a worm"
+
+#I changed something now
+#These are the changes in master
+>>>>>>> 3cc580692f0941057785718d699cd7663eef4ac2
