@@ -15,8 +15,4 @@ Mi futuro se ve increíble: me divierto como programador, puedo dormir bien, hac
 
 Mi objetivo de carrera es usar mis conocimientos para crear un mundo más justo y en paz. 
 =======
-Vermis Sum: "I am a worm"
 
-#I changed something now
-#These are the changes in master
->>>>>>> 3cc580692f0941057785718d699cd7663eef4ac2
